@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  frontend:
+    build: ./client
+    ports:
+      - "5000:5000"
+    links:
+      - app
+
+  app:
+    build: ./server
+    ports:
+      - "8080:8080"
