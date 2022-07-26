@@ -4,11 +4,11 @@ services:
   frontend:
     build: ./client
     ports:
-      - "5000:5000"
+      - "80:80"
     links:
       - app
 
   app:
     build: ./server
     ports:
-      - "8080:8080"
+      - "5000:5000"
