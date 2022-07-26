@@ -18,5 +18,4 @@ COPY . .
 # Expose port to access server
 EXPOSE 5000
 
-# EXPOSE 5001
-CMD [ "node", "app.js" ]
+CMD [ "node", "app.js"]
