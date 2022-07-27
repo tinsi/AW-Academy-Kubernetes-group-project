@@ -1,15 +1,15 @@
-const mysql = require('mysql');
+const pg = require('pg');
 const dotenv = require('dotenv');
 let instance = null;
 dotenv.config();
 
-const connection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DB_PORT
-});
+const AWS = require("aws-sdk");
+
+const Client = require('pg').Client;
+
+const connection = new Client({
+    connectionString: process.env.DB_CONNECTIONSTRING,
+  });
 
 connection.connect((err) => {
     if (err) {
@@ -34,7 +34,7 @@ class DbService {
                     resolve(results);
                 })
             });
-            // console.log(response);
+            //console.log(response);
             return response;
         } catch (error) {
             console.log(error);
