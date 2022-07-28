@@ -1,18 +1,126 @@
+body {
+  background: #0e293c;
+}
+
 main {
-    width: 50%;
-    margin: 50px auto;
-    text-align: center;
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
 }
 
+/* Taulukon ulkoasu */
 table {
-    margin: 50px auto;
+  /* border-collapse: collapse; */
+  border: 7px solid #e1ecf4;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0px 7px 29px 0px #cccccc;
+  background-color: #e1ecf4;
 }
 
-table, th, td {
-    border-collapse: collapse;
-    border: 1px solid #000;
+th,
+td {
+  padding: 10px;
 }
 
-th, td {
-    padding: 5px;
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
+
+table,
+th,
+td {
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  /* font: "Trebuchet MS"; */
+  font-size: 16px;
+  color: #0e293c;
+}
+
+p {
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  /* font: "Trebuchet MS"; */
+  font-size: 16px;
+  color: #e1ecf4;
+}
+
+label {
+  font-family: sans-serif;
+  font: "Trebuchet MS";
+  font-size: 16px;
+  color: #c6daec;
+}
+
+/* Tällä saadaan kuva keskitettyä ja voidaan määrittää sen koko (width) */
+.center {
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 21%;
+}
+
+/* Input-laatikoiden ulkoasu */
+
+input {
+  border: none;
+  border-radius: 3px;
+  border-bottom: 2px solid #39739d;
+  padding: 8px 0.8em;
+}
+
+/* Painikkeiden ulkoasu */
+button {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
 }

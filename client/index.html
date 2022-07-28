@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>web app</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>mursusovellus</title>
+  </head>
+  <body>
     <main>
-        <label>Name:</label>
-        <input type="text" id="name-input">
-        <button id="add-name-btn">Add Name</button>
+      <input placeholder="add name" type="text" id="name-input" />
+      <button id="add-name-btn">Add</button>
 
-        <br><br><br>
-        <div>
-           <input placeholder="search by name" id="search-input">
-           <button id="search-btn">Search</button>
-        </div>
+      <br /><br />
+      <div>
+        <input placeholder="search by name" id="search-input" />
+        <button id="search-btn">Search</button>
+      </div>
 
-        <table id="table">
-            <thead>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Date Added</th>
-                <th>Delete</th>
-                <th>Edit</th>
-            </thead>
-            <tbody></tbody>
-        </table>
+      <section hidden id="update-row">
+        <br /><br />
+        <br />
+        <input placeholder="edit name" type="text" id="update-name-input" />
+        <button id="update-row-btn">Update</button>
+      </section>
 
-        <section hidden id="update-row">
-            <label>Name:</label>
-            <input type="text" id="update-name-input">
-            <button id="update-row-btn">Update</button>
-        </section>
+      <table id="table">
+        <thead>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Date Added</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <img
+        src="https://thumbs.gfycat.com/DistinctVeneratedAmericancicada.webp"
+        alt="mursu"
+        id="mursu"
+        class="center"
+      />
+      <p>Ryhmä 4: Tiina, Linda, Emmi</p>
     </main>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
