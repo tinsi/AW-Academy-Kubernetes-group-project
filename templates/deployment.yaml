@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mursu-web
+  namespace: default
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: web
+
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: front
+          image: "235920682125.dkr.ecr.eu-north-1.amazonaws.com/mursu-style:latest"
+          ports:
+            - containerPort: 80
+        - name: back
+          image: "235920682125.dkr.ecr.eu-north-1.amazonaws.com/mursurepoback:latest"
+          ports:
+            - containerPort: 5000
